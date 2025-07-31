@@ -1,0 +1,25 @@
+name: Run Python Script with Conda (Self-Hosted)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  run-conda-script:
+    runs-on: self-hosted  # 💻 This targets your laptop runner
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up conda environment
+        shell: cmd
+        run: |
+          call C:\Users\basant.joshi\AppData\Local\anaconda3\Scripts\conda.exe activate rag
+          python main.py
+          
+      - name: Print Conda Info
+        shell: cmd
+        run: |
+          call %USERPROFILE%\miniconda3\condabin\conda.bat info
