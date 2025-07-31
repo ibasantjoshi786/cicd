@@ -16,8 +16,9 @@ jobs:
       - name: Set up conda environment
         shell: cmd
         run: |
-          call C:\Users\basant.joshi\AppData\Local\anaconda3\Scripts\conda.exe activate rag
-          python main.py
+          call C:\Users\basant.joshi\AppData\Local\anaconda3\condabin\conda.bat activate rag
+          cd src
+          pytest test
           
       - name: Print Conda Info
         shell: cmd
