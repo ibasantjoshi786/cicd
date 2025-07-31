@@ -33,6 +33,7 @@ jobs:
           
       - name: Build Docker image
         run: |
+          cd ..
           docker build -t myapp-image .
 
       - name: Run Docker container
