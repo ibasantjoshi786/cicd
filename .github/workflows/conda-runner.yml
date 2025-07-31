@@ -23,4 +23,4 @@ jobs:
       - name: Print Conda Info
         shell: cmd
         run: |
-          call %USERPROFILE%\miniconda3\condabin\conda.bat info
+          call C:\Users\basant.joshi\AppData\Local\anaconda3\condabin\conda.bat info
