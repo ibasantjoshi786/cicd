@@ -1,0 +1,23 @@
+class FeatureEngineering:
+    def __init__(self):
+        pass
+
+    def feature_engineering(self):
+        pass
+
+    def day_feature(self):
+        """
+        take day as input and return start of the month,
+        mid of the month or end of the month
+        :return:
+        """
+        pass
+
+    def time_feature(self):
+        """
+        take time as input and return early morning, morning, afternoon, evening and night
+        :return:
+        """
+        pass
+
+    
