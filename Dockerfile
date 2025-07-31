@@ -10,4 +10,4 @@ COPY . /app
 RUN pip install --no-cache-dir pandas pytest scikit-learn
 
 # Run the pipeline.py inside src folder when container starts
-CMD ["python", "src/pipeline.py"]
+CMD ["python","-m", "src.pipeline"]
