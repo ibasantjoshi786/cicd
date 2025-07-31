@@ -30,3 +30,12 @@ jobs:
         shell: cmd
         run: |
           call C:\Users\basant.joshi\AppData\Local\anaconda3\condabin\conda.bat info
+          
+      - name: Build Docker image
+        run: |
+          docker build -t myapp-image .
+
+      - name: Run Docker container
+        run: |
+          docker run -d --name myapp-container -p 8000:8000 myapp-image
+          docker logs -f myapp-container
