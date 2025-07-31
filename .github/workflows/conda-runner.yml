@@ -25,6 +25,7 @@ jobs:
           call C:\Users\basant.joshi\AppData\Local\anaconda3\condabin\conda.bat activate rag
           cd src
           pytest test
+          cd ..
           
       - name: Print Conda Info
         shell: cmd
@@ -33,7 +34,6 @@ jobs:
           
       - name: Build Docker image
         run: |
-          cd ..
           docker build -t myapp-image .
 
       - name: Run Docker container
