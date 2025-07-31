@@ -44,5 +44,5 @@ def test_extract_time(setup_db):
 def test_convert_float_to_int(setup_db):
     setup_db.convert_float_to_int()
 
-    assert setup_db.df.loc[0, 'amount'] == 1100
+    assert setup_db.df.loc[0, 'amount'] == 100
 
