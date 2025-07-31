@@ -1,8 +1,14 @@
-name: Run Python Script with Conda (Self-Hosted)
-
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - 'feature/*'   # or '*' for all branches
+      - feature
+  pull_request:
+    branches:
+      - main
+      - feature
+      - 'feature/*'   # or '*' for all branches
   workflow_dispatch:
 
 jobs:
